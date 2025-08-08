@@ -1,0 +1,19 @@
+<h1>hi {{firstname}},how are you?</h1>
+{% with firstname="ALI"%}
+<h4>hello mr {{firstname}} how are you</h4>
+{%endwith%}
+
+<ul>
+    {%for x in mymembers%}
+        <li>{{x.firstname}}</li>
+    {%endfor%}
+</ul>
+{% with number=2 %}
+    {% if number == 1 %}
+        <h3>hello</h3>
+    {% else %}
+        <h3>bye</h3>
+    {% endif %}
+{% endwith %}
+
+
