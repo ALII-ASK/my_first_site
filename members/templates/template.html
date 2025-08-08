@@ -8,10 +8,10 @@
         <li>{{x.firstname}}</li>
     {%endfor%}
 </ul>
-{% with number=2 %}
-    {% if number == 1 %}
+{% with number=0 %}
+    {% if number   %}
         <h3>hello</h3>
-    {% elif number == 2 %}
+    {% elif number %}
         <h3>hibye</h3>
     {% else %}
         <h3>bye</h3>
