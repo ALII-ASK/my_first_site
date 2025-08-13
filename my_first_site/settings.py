@@ -10,7 +10,17 @@ SECRET_KEY = 'django-insecure-d0ucm-28kx6n9@gy721)=_jxl1(-j@5p&km2!a@q-agpz&@lrx
 
 DEBUG =False
 
-ALLOWED_HOSTS = []
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'mystaticfiles'
+]
+
+STATIC_ROOT = BASE_DIR / 'productionfiles'
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 
@@ -100,11 +110,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-STATIC_ROOT=BASE_DIR / 'productionfiles'
